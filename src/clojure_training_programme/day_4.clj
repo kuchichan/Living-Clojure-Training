@@ -34,3 +34,9 @@
 (true? (palindrome '(1 1 3 3 1 1)))
 (false? (palindrome '(:a :b :c)))
 
+; Duplicate sequence
+
+(= ((fn du [xs] (reduce concat (map vector xs xs))) [1 2 3]) '(1 1 2 2 3 3))
+(= ((fn du [xs] (reduce concat (map vector xs xs))) [:a :a :b :b]) '(:a :a :a :a :b :b :b :b))
+(= ((fn du [xs] (reduce concat (map vector xs xs))) [[1 2] [3 4]]) '([1 2] [1 2] [3 4] [3 4]))
+
