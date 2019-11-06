@@ -57,3 +57,13 @@
 #((fn ff [[l-root ll lr :as left] [r-root rl rr :as right]]
     (or (= nil left right)
         (and (= l-root r-root) (ff ll rr) (ff lr rl)))) % %)
+
+
+(let [
+      [x [l-root ll lr :as left] [r-root rl rr :as right]]
+      '(:a (:b nil nil) (:c nil nil))
+      ]
+  (str x " " "hi" l-root)
+  )
+
+
